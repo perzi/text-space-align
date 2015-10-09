@@ -1,2 +1,2 @@
-# space-align
-Align JavaScript source code into columns. 
+# text-space-align
+Align text into columns.

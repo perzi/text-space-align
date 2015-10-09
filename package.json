@@ -1,8 +1,8 @@
 {
   "name": "text-space-align",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Space align text in strings",
-  "main": "modules/text.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha -R mocha-osx-reporter list",
     "watch": "mocha -R mocha-osx-reporter -w"

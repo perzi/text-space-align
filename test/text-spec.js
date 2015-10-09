@@ -1,5 +1,5 @@
 var assert = require("assert");
-var text = require("../modules/text").text;
+var text = require("../modules/text");
 
 describe('text', function() {
   describe('#columnify()', function () {

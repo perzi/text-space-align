@@ -1,6 +1,6 @@
 {
   "name": "text-space-align",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Space align text in strings",
   "main": "index.js",
   "scripts": {

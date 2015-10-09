@@ -1,4 +1,4 @@
-exports.text = {
+module.exports = {
 
   // TODO: create this depending on language
   reg: /(?:^\s+){0,1}(?:"[^"\\\r\n]*(?:\\.[^"\\\r\n]*)*"|'[^''\\\r\n]*(?:\\.[^'\\\r\n]*)*'|\/\*.*?\*\/|\/\/.*$|\S+)/g,

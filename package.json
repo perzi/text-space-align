@@ -1,13 +1,13 @@
 {
   "name": "space-align",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Space align text in strings",
-  "main": "index.js",
+  "main": "modules/text.js",
   "scripts": {
     "test": "mocha -R mocha-osx-reporter list",
     "watch": "mocha -R mocha-osx-reporter -w"
   },
-  "author": "Per Zimmerman",
+  "author": "Per Zimmerman <per.zimmerman@gmail.com> (http://about.me/perzi)",
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.3.3",

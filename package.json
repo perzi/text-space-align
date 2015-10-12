@@ -1,11 +1,12 @@
 {
   "name": "text-space-align",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Space align text in strings",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R mocha-osx-reporter list",
-    "watch": "mocha -R mocha-osx-reporter -w"
+    "watch": "mocha -R mocha-osx-reporter -w",
+    "watchspec": "mocha -R spec -w"
   },
   "author": "Per Zimmerman <per.zimmerman@gmail.com> (http://about.me/perzi)",
   "homepage": "https://github.com/perzi/text-space-align",

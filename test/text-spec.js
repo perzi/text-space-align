@@ -16,6 +16,22 @@ describe('text', function() {
     it('should preserve initial indentation', function () {
       assert.equal(text.columnify("  let x = 3;\nlet ab = 4;"), "  let x  = 3;\nlet   ab = 4;");
     });
+
+    it('handle empty lines', function () {
+      assert.equal(text.columnify("x = 3;\n\nab = 4;"), "x  = 3;\n\nab = 4;");
+    });
+
+    it('not pad ending of line', function () {
+      assert.equal(text.columnify("x = 3;\nab = 45;"), "x  = 3;\nab = 45;");
+    });
+
+    it('handle empty line at end', function () {
+      assert.equal(text.columnify("x = 3;\n"), "x = 3;\n");
+    });
+
+    it('single line should remove unnecessary space', function () {
+      assert.equal(text.columnify("x  = 3;"), "x = 3;");
+    });
   });
 
   describe('#decolumnify()', function () {

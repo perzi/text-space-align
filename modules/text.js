@@ -13,9 +13,14 @@ module.exports = {
       return this.parse(line);
     }, this);
 
+    // calculate max lengths
     var maxLengths = [];
-
     tokenizedLines.forEach(function(tokenizedLine) {
+
+      if (!tokenizedLine) {
+        return;
+      }
+
       var lengths = tokenizedLine.map(function(token) {
         return token.length;
       });
@@ -27,10 +32,20 @@ module.exports = {
       });
     }, this);
 
+    // pad tokens
     var result = tokenizedLines.map(function(tokenizedLine) {
-      var paddedTokens = tokenizedLine.map(function(token, index) {
-        var pad = maxLengths[index] - token.length + 1;
-        return token + (new Array(pad)).join(" ");
+
+      if (!tokenizedLine) {
+        return "";
+      }
+
+      var paddedTokens = tokenizedLine.map(function(token, index, arr) {
+        if (index < arr.length - 1) {
+          var pad = maxLengths[index] - token.length + 1;
+          return token + (new Array(pad)).join(" ");
+        } else {
+          return token;
+        }
       });
 
       return paddedTokens.join(" ");

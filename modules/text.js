@@ -1,7 +1,7 @@
 module.exports = {
 
   // TODO: create this depending on language
-  reg: /(?:^\s+){0,1}(?:"[^"\\\r\n]*(?:\\.[^"\\\r\n]*)*"|'[^''\\\r\n]*(?:\\.[^'\\\r\n]*)*'|\/\*.*?\*\/|\/\/.*$|\S+)/g,
+  reg: /(?:^\s+){0,1}\S*(?:"[^"\\\r\n]*(?:\\.[^"\\\r\n]*)*"|'[^'\\\r\n]*(?:\\.[^'\\\r\n]*)*'|\/\*.*?\*\/|\/\/.*$|\S+)\S*/g,
 
   parse: function(s) {
     return s.match(this.reg);

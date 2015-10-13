@@ -32,6 +32,14 @@ describe('text', function() {
     it('single line should remove unnecessary space', function () {
       assert.equal(text.columnify("x  = 3;"), "x = 3;");
     });
+
+    it('handle comment in text', function () {
+      assert.equal(text.columnify("let x = 1; /* 123 */ let y = 2; // end"), "let x = 1; /* 123 */ let y = 2; // end");
+    });
+
+    it('handle double quoted string in text', function () {
+      assert.equal(text.columnify('let x = "a \\"name\\"";\nlet ab = 1;'), 'let x  = "a \\"name\\"";\nlet ab = 1;');
+    });
   });
 
   describe('#decolumnify()', function () {
